@@ -3,7 +3,7 @@ import Home from './Home'
 import About from './About'
 import Contact from './Contact'
 import Service from './Service'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 const App = () => {
   return (
     <>
@@ -12,6 +12,7 @@ const App = () => {
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/service" component={Service} />
+        <Redirect to="/" />
       </Switch>
     </>
   );
